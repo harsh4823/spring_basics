@@ -42,9 +42,8 @@ public class FileServiceImp implements FileService{
         String originalFileName = image.getOriginalFilename();
 
         String randomID = UUID.randomUUID().toString();
-        String fileExtension = randomID.concat(originalFileName.substring(originalFileName.lastIndexOf('.')));
-        String fileName = randomID + fileExtension;
-
+        String fileName = randomID.concat(originalFileName.substring(originalFileName.lastIndexOf('.')));
+        
         File folder = new File(path);
         if (!folder.exists()){
             folder.mkdirs();
